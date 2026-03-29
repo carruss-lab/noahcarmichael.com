@@ -75,8 +75,7 @@
       "givenName": "Noah",
       "familyName": "Carmichael",
       "jobTitle": "Managing Partner",
-      "honorificPrefix": "",
-      "nationality": "American",
+      "nationality": { "@type": "Country", "name": "United States" },
       "description": "American executive, investor, publisher, and best-selling author focused on building a globally oriented ownership ecosystem across finance, real estate development, fintech, legal technology, and advertising technology. Managing Partner of Carmichael & Russ Capital. Publisher and Editor-in-Chief of The Black Executive Journal™. U.S. Navy veteran and FAA-certified Air Traffic Control Specialist.",
       "url": "https://www.noahcarmichael.com",
       "image": {
@@ -92,27 +91,17 @@
         "addressRegion": "Arizona",
         "addressCountry": "US"
       },
-      "worksFor": {
-        "@id": "https://carmichaelrusscap.com/#organization"
-      },
-      "founder": [
-        { "@id": "https://carmichaelrusscap.com/#organization" },
-        { "@id": "https://offeringpro.com/#organization" },
-        { "@id": "https://www.getdspconnect.com/#organization" },
-        { "@id": "https://blackexecutivebrief.com/#organization" }
-      ],
+      "worksFor": { "@id": "https://carmichaelrusscap.com/#organization" },
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
           "name": "University of Phoenix",
-          "url": "https://www.phoenix.edu",
-          "description": "Master of Business Administration (MBA)"
+          "url": "https://www.phoenix.edu"
         },
         {
           "@type": "CollegeOrUniversity",
           "name": "Embry-Riddle Aeronautical University",
-          "url": "https://erau.edu",
-          "description": "Advanced studies in Physics and Professional Aeronautics"
+          "url": "https://erau.edu"
         }
       ],
       "hasCredential": [
@@ -165,10 +154,14 @@
         { "@id": "https://offeringpro.com/#organization" },
         { "@id": "https://www.getdspconnect.com/#organization" },
         { "@type": "Organization", "name": "Gratitude and Grace Foundation" },
-        { "@type": "MilitaryOrganization", "name": "United States Navy" }
+        { "@type": "Organization", "name": "United States Navy" }
       ],
       "memberOf": [
-        { "@type": "MilitaryOrganization", "name": "United States Navy", "startDate": "2001", "endDate": "2006" }
+        {
+          "@type": "Organization",
+          "name": "United States Navy",
+          "description": "U.S. Navy service 2001–2006 as FAA-certified Air Traffic Control Specialist"
+        }
       ],
       "knowsAbout": [
         "Business Acquisitions",
@@ -201,9 +194,7 @@
         "https://www.getdspconnect.com",
         "https://carmichaelrusscap.com"
       ],
-      "mainEntityOfPage": {
-        "@id": "https://www.noahcarmichael.com/#webpage"
-      }
+      "mainEntityOfPage": { "@id": "https://www.noahcarmichael.com/#webpage" }
     },
 
     {
@@ -215,7 +206,7 @@
       "logo": "https://carmichaelrusscap.com/hubfs/CR%20-%20Edited-1.png",
       "description": "Independent investment and advisory firm specializing in business acquisitions, private credit, real estate development, and real-world asset infrastructure. Parent company of OfferingPro and DSP Connect. Veteran-owned.",
       "founder": { "@id": "https://www.noahcarmichael.com/#person" },
-      "employee": { "@id": "https://www.noahcarmichael.com/#person" },
+      "member": { "@id": "https://www.noahcarmichael.com/#person" },
       "foundingLocation": { "@type": "Place", "name": "Scottsdale, Arizona, US" },
       "legalName": "Carmichael & Russ Capital, LLC",
       "address": {
@@ -242,7 +233,7 @@
       "@id": "https://offeringpro.com/#organization",
       "name": "OfferingPro",
       "url": "https://offeringpro.com",
-      "applicationCategory": "LegalTech, FinancialApplication",
+      "applicationCategory": "LegalTech",
       "operatingSystem": "Web",
       "description": "AI-assisted SEC form completion platform for Reg CF (Form C) and Reg A+ (Form 1-A) capital raises. Step-by-step wizards, real-time compliance checks, EDGAR submission prep, AI document generation, and team collaboration. Owned and operated by Carmichael & Russ Capital, LLC.",
       "parentOrganization": { "@id": "https://carmichaelrusscap.com/#organization" },
@@ -270,7 +261,7 @@
       "@id": "https://www.getdspconnect.com/#organization",
       "name": "DSP Connect",
       "url": "https://www.getdspconnect.com",
-      "description": "Programmatic advertising infrastructure built for agencies and media buyers. Access to 80+ SSPs, same-day activation, no contracts, no minimums, and partner revenue share on managed ad spend. Full-funnel inventory across CTV, DOOH, native, display, and video through a single RTB platform.",
+      "description": "Programmatic advertising infrastructure built for agencies and media buyers. Access to 80+ SSPs, same-day activation, no contracts, no minimums, and partner revenue share on managed ad spend. Full-funnel inventory across CTV, DOOH, native, display, and video.",
       "parentOrganization": { "@id": "https://carmichaelrusscap.com/#organization" },
       "founder": { "@id": "https://www.noahcarmichael.com/#person" },
       "areaServed": "Global",
@@ -278,37 +269,40 @@
     },
 
     {
-      "@type": "Organization",
+      "@type": ["Organization", "NewsMediaOrganization"],
       "@id": "https://blackexecutivebrief.com/#organization",
       "name": "The Black Executive Journal™",
       "url": "https://blackexecutivebrief.com",
       "description": "Independent business media brand covering global capital markets, operator economics, and executive leadership across the U.S., Africa, and the Caribbean.",
+      "founder": { "@id": "https://www.noahcarmichael.com/#person" },
       "editor": { "@id": "https://www.noahcarmichael.com/#person" },
-      "publisher": { "@id": "https://www.noahcarmichael.com/#person" },
+      "publishingPrinciples": "https://blackexecutivebrief.com",
       "areaServed": ["United States", "Africa", "Caribbean", "Global"]
     },
 
     {
       "@type": "Book",
-      "@id": "https://www.amazon.com/stores/Noah-Carmichael/author/B07B9FHNT6#book",
+      "@id": "https://www.noahcarmichael.com/#book",
       "name": "A Lawyer's Guide to Marketing",
       "author": { "@id": "https://www.noahcarmichael.com/#person" },
       "url": "https://www.amazon.com/stores/Noah-Carmichael/author/B07B9FHNT6",
-      "genre": ["Business", "Marketing", "Legal"],
+      "publisher": { "@type": "Organization", "name": "Noah Carmichael" },
+      "genre": "Business",
       "inLanguage": "en-US",
-      "award": "Best-Seller"
+      "award": "Best-Seller",
+      "description": "The definitive marketing guide for legal professionals and legal services firms covering digital strategy, lead generation, brand positioning, and measurable ROI."
     },
 
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://www.noahcarmichael.com" },
-        { "@type": "ListItem", "position": 2, "name": "About",        "item": "https://www.noahcarmichael.com/#about" },
-        { "@type": "ListItem", "position": 3, "name": "Foundation",   "item": "https://www.noahcarmichael.com/#foundation" },
-        { "@type": "ListItem", "position": 4, "name": "The Partner Stack", "item": "https://www.noahcarmichael.com/#stack" },
-        { "@type": "ListItem", "position": 5, "name": "Philosophy",   "item": "https://www.noahcarmichael.com/#philosophy" },
-        { "@type": "ListItem", "position": 6, "name": "Background",   "item": "https://www.noahcarmichael.com/#background" },
-        { "@type": "ListItem", "position": 7, "name": "Connect",      "item": "https://www.noahcarmichael.com/#connect" }
+        { "@type": "ListItem", "position": 1, "name": "Home",              "item": "https://www.noahcarmichael.com" },
+        { "@type": "ListItem", "position": 2, "name": "About",             "item": "https://www.noahcarmichael.com/#about" },
+        { "@type": "ListItem", "position": 3, "name": "Foundation",        "item": "https://www.noahcarmichael.com/#foundation" },
+        { "@type": "ListItem", "position": 4, "name": "Partner Advantage", "item": "https://www.noahcarmichael.com/#stack" },
+        { "@type": "ListItem", "position": 5, "name": "Philosophy",        "item": "https://www.noahcarmichael.com/#philosophy" },
+        { "@type": "ListItem", "position": 6, "name": "Background",        "item": "https://www.noahcarmichael.com/#background" },
+        { "@type": "ListItem", "position": 7, "name": "Connect",           "item": "https://www.noahcarmichael.com/#connect" }
       ]
     },
 
@@ -318,34 +312,10 @@
       "description": "The infrastructure holdings that form the foundation of Carmichael & Russ Capital's globally oriented ownership ecosystem.",
       "numberOfItems": 4,
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Carmichael & Russ Capital",
-          "url": "https://carmichaelrusscap.com",
-          "item": { "@id": "https://carmichaelrusscap.com/#organization" }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "OfferingPro",
-          "url": "https://offeringpro.com",
-          "item": { "@id": "https://offeringpro.com/#organization" }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DSP Connect",
-          "url": "https://www.getdspconnect.com",
-          "item": { "@id": "https://www.getdspconnect.com/#organization" }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "The Black Executive Journal™",
-          "url": "https://blackexecutivebrief.com",
-          "item": { "@id": "https://blackexecutivebrief.com/#organization" }
-        }
+        { "@type": "ListItem", "position": 1, "name": "Carmichael & Russ Capital",    "url": "https://carmichaelrusscap.com",      "item": { "@id": "https://carmichaelrusscap.com/#organization" } },
+        { "@type": "ListItem", "position": 2, "name": "OfferingPro",                  "url": "https://offeringpro.com",            "item": { "@id": "https://offeringpro.com/#organization" } },
+        { "@type": "ListItem", "position": 3, "name": "DSP Connect",                  "url": "https://www.getdspconnect.com",      "item": { "@id": "https://www.getdspconnect.com/#organization" } },
+        { "@type": "ListItem", "position": 4, "name": "The Black Executive Journal™", "url": "https://blackexecutivebrief.com",    "item": { "@id": "https://blackexecutivebrief.com/#organization" } }
       ]
     },
 
@@ -381,7 +351,7 @@
           "name": "What is DSP Connect?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "DSP Connect is a programmatic advertising infrastructure platform built for agencies and media buyers. It provides access to 80+ SSPs, same-day campaign activation, no contracts or minimums, and partner revenue share on managed ad spend. It offers full-funnel inventory across CTV, DOOH, native, display, and video."
+            "text": "DSP Connect is a programmatic advertising infrastructure platform built for agencies and media buyers. It provides access to 80+ SSPs, same-day campaign activation, no contracts or minimums, and partner revenue share on managed ad spend. Full-funnel inventory across CTV, DOOH, native, display, and video."
           }
         },
         {
