@@ -26,25 +26,147 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "@id": "https://www.noahcarmichael.com/now-is-the-time#book",
-  "name": "Now Is The Time",
-  "alternateName": "Now Is the Time: A Noah Carmichael Memoir",
-  "description": "A memoir tracing Noah Carmichael's journey from a three-year-old watching the Klan burn the house of a civil rights leader on Smith Street — the man who raised his mother — with no sirens, no explanation, no adult saying a word, through displacement, loss, military service, and corporate America, to building a globally oriented ownership ecosystem. A story about protection, survival, and building things that cannot be burned.",
-  "author": {
-    "@type": "Person",
-    "@id": "https://www.noahcarmichael.com/#person",
-    "name": "Noah Carmichael"
-  },
-  "url": "https://www.noahcarmichael.com/now-is-the-time",
-  "genre": ["Autobiography", "Memoir", "Business", "African American Studies"],
-  "inLanguage": "en-US",
-  "bookFormat": "Hardcover",
-  "publisher": {
-    "@type": "Person",
-    "@id": "https://www.noahcarmichael.com/#person",
-    "name": "Noah Carmichael"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.noahcarmichael.com/now-is-the-time.html#webpage",
+      "url": "https://www.noahcarmichael.com/now-is-the-time.html",
+      "name": "Now Is The Time — A Memoir by Noah Carmichael",
+      "description": "A memoir tracing Noah Carmichael's journey from a three-year-old watching the Klan burn the house of a civil rights leader on Smith Street — the man who raised his mother — through displacement, loss, military service, and corporate America, to building a globally oriented ownership ecosystem.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.noahcarmichael.com/#website",
+        "url": "https://www.noahcarmichael.com",
+        "name": "Noah Carmichael"
+      },
+      "about": { "@id": "https://www.noahcarmichael.com/now-is-the-time.html#book" },
+      "mainEntity": { "@id": "https://www.noahcarmichael.com/now-is-the-time.html#book" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.noahcarmichael.com" },
+          { "@type": "ListItem", "position": 2, "name": "Now Is The Time", "item": "https://www.noahcarmichael.com/now-is-the-time.html" }
+        ]
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.noahcarmichael.com/now-is-the-time.html#book",
+      "name": "Now Is The Time",
+      "alternateName": "Now Is the Time: A Carmichael Autobiography",
+      "url": "https://www.noahcarmichael.com/now-is-the-time.html",
+      "description": "A memoir tracing Noah Carmichael's journey from a three-year-old watching the Klan burn the house of a civil rights leader and businessman on Smith Street in Mullins, South Carolina — the man who raised his mother — with no sirens, no explanation, no adult saying a word. Through displacement to Arizona, the loss of his closest friend Terrence, the United States Navy, Fortune 500 leadership, Valley Fever, divorce, and a $10 million loss — to building a globally oriented ownership ecosystem. A story about protection, survival, lineage, and building things that cannot be burned.",
+      "inLanguage": "en-US",
+      "genre": ["Autobiography", "Memoir", "Business", "African American History", "Civil Rights"],
+      "bookFormat": "https://schema.org/Hardcover",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.noahcarmichael.com/#person",
+        "name": "Noah Carmichael",
+        "url": "https://www.noahcarmichael.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/mrnoahcarmichael/",
+          "https://www.amazon.com/stores/Noah-Carmichael/author/B07B9FHNT6",
+          "https://carmichaelrusscap.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://www.noahcarmichael.com/#person",
+        "name": "Noah Carmichael"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Civil Rights Movement" },
+        { "@type": "Thing", "name": "Ku Klux Klan" },
+        { "@type": "Thing", "name": "South Carolina Progressive Democrats" },
+        { "@type": "Thing", "name": "African American History" },
+        { "@type": "Thing", "name": "United States Navy" },
+        { "@type": "Thing", "name": "Entrepreneurship" },
+        { "@type": "Thing", "name": "Capital Formation" },
+        { "@type": "Place", "name": "Mullins, South Carolina" },
+        { "@type": "Place", "name": "Smith Street, Mullins, South Carolina" }
+      ],
+      "mentions": [
+        {
+          "@type": "Person",
+          "name": "Grady Carmichael",
+          "description": "Civil rights leader, businessman, and the man who raised the author's mother. His house on Smith Street was burned by the Klan. His letters are held in the Modjeska Simkins papers."
+        },
+        {
+          "@type": "Person",
+          "name": "Miss Carrie",
+          "description": "Noah Carmichael's grandmother. Built a house as a widow in the Jim Crow South. The moral engine of the memoir."
+        },
+        {
+          "@type": "Organization",
+          "name": "South Carolina Progressive Democrats",
+          "description": "Civil rights political organization active in South Carolina in the 1950s. Grady Carmichael served as a delegate."
+        },
+        {
+          "@type": "Organization",
+          "name": "United States Navy",
+          "description": "Noah Carmichael served as an FAA-certified Air Traffic Control Specialist from 2001 to 2006."
+        }
+      ],
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.noahcarmichael.com/now-is-the-time.html"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.noahcarmichael.com/#person",
+      "name": "Noah Carmichael",
+      "jobTitle": "Managing Partner",
+      "url": "https://www.noahcarmichael.com",
+      "description": "American executive, investor, publisher, and best-selling author. Managing Partner of Carmichael & Russ Capital. Author of Now Is The Time and A Lawyer's Guide to Marketing.",
+      "sameAs": [
+        "https://www.linkedin.com/in/mrnoahcarmichael/",
+        "https://www.amazon.com/stores/Noah-Carmichael/author/B07B9FHNT6",
+        "https://carmichaelrusscap.com",
+        "https://blackexecutivebrief.com",
+        "https://carmichaelrusscap.com/noah-carmichael-managing-partner-carmichael-russ-capital"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Now Is The Time by Noah Carmichael about?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Now Is The Time is a memoir by Noah Carmichael tracing his journey from a three-year-old watching the Klan burn the house of a civil rights leader on Smith Street in Mullins, South Carolina — the man who raised his mother — through displacement, the United States Navy, corporate America, Valley Fever, and financial loss, to building a globally oriented ownership ecosystem. It is a story about protection, survival, lineage, and building things that cannot be burned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Grady Carmichael?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grady Carmichael was a civil rights leader, businessman, and the man who raised Noah Carmichael's mother in Mullins, South Carolina. His house on Smith Street was burned by the Klan. His letters are preserved in the Modjeska Simkins papers. He served as a delegate for the South Carolina Progressive Democrats in the 1950s."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is Now Is The Time by Noah Carmichael available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Now Is The Time is currently in development. Readers can join the waitlist at noahcarmichael.com/now-is-the-time.html to be notified at launch and receive early access and excerpts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What other books has Noah Carmichael written?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noah Carmichael is the best-selling author of A Lawyer's Guide to Marketing, available on Amazon. Now Is The Time is his forthcoming memoir."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
