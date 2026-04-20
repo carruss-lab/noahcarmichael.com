@@ -556,7 +556,7 @@
           "name": "How can institutions arrange a bulk or custom order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For orders larger than the Strategic tier, custom sponsorship, or co-branded institutional editions, reach out directly at noah@noahcarmichael.com."
+            "text": "For orders larger than the Strategic tier, custom sponsorship, or co-branded institutional editions, reach out directly at bulkorder@noahcarmichael.com."
           }
         }
       ]
@@ -758,6 +758,9 @@
   .editions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
   .edition-card { background: var(--navy-lift); padding: 3rem; border: 1px solid var(--rule); position: relative; transition: all 0.4s; }
   .edition-card:hover { border-color: var(--gold-soft); transform: translateY(-4px); }
+  .edition-cover { display: flex; justify-content: center; margin: -1rem auto 2rem; max-width: 240px; }
+  .edition-cover img { display: block; width: 100%; height: auto; box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 8px 16px -4px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201, 169, 89, 0.08); transition: transform 0.5s cubic-bezier(.2, .8, .2, 1); }
+  .edition-card:hover .edition-cover img { transform: translateY(-4px); }
   .edition-card .edition-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
   .edition-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 500; line-height: 1.1; margin-bottom: 1rem; color: var(--ivory); }
   .edition-card p { color: var(--ivory-dim); line-height: 1.6; margin-bottom: 1.5rem; }
@@ -1183,12 +1186,18 @@
       </div>
       <div class="editions-grid">
         <div class="edition-card">
+          <div class="edition-cover">
+            <img src="ubuntu_exec_cover.jpg" alt="Ubuntu Capital — Executive Edition cover" />
+          </div>
           <div class="edition-label">Executive Edition</div>
           <h3 class="serif">The Strategic Brief</h3>
           <p>A concise architecture of coordinated capital formation and the precedents behind it. Written for decision-makers and institutional leaders who need the thesis in its most distilled form.</p>
           <div class="tagline">Perspective.</div>
         </div>
         <div class="edition-card">
+          <div class="edition-cover">
+            <img src="ubuntu_standard_cover.jpg" alt="Ubuntu Capital — Standard Edition cover" />
+          </div>
           <div class="edition-label">Standard Edition</div>
           <h3 class="serif">The Full Framework</h3>
           <p>A comprehensive expansion of the thesis into structure, design, and implementation. Written for operators and builders who need the framework in detail to put it into practice.</p>
@@ -1667,7 +1676,7 @@
         <details>
           <summary>How can institutions arrange a bulk or custom order?</summary>
           <!-- REPLACE: contact email -->
-          <p>For orders larger than the $7,500 Strategic tier, custom sponsorship, or co-branded institutional editions, reach out directly at <a href="mailto:noah@noahcarmichael.com" style="color:var(--gold);text-decoration:underline;">noah@noahcarmichael.com</a>.</p>
+          <p>For orders larger than the $7,500 Strategic tier, custom sponsorship, or co-branded institutional editions, reach out directly at <a href="mailto:bulkorder@noahcarmichael.com" style="color:var(--gold);text-decoration:underline;">bulkorder@noahcarmichael.com</a>.</p>
         </details>
       </div>
     </div>
@@ -1709,7 +1718,7 @@
       <a href="#faq">FAQ</a>
       <h4 style="margin-top: 1.5rem;">Contact</h4>
       <!-- REPLACE: contact email and any social links -->
-      <a href="mailto:noah@noahcarmichael.com">noah@noahcarmichael.com</a>
+      <a href="mailto:info@noahcarmichael.com">info@noahcarmichael.com</a>
       <a href="https://noahcarmichael.com" target="_blank">noahcarmichael.com</a>
     </div>
   </div>
