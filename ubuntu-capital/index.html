@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Ubuntu Capital — The Founding Release | Noah Carmichael</title>
-<meta name="description" content="Ubuntu Capital — a two-part thesis on coordinated capital formation and the African diaspora investment network. Secure your Founding Edition before the November public release." />
+<meta name="description" content="Ubuntu Capital — a two-part thesis on coordinated capital formation and the African diaspora investment network. Founding Edition reservations are open now; signing and shipping begins May 15, 2026." />
 
 <!-- Open Graph / LinkedIn / Facebook preview -->
 <meta property="og:type" content="book" />
 <meta property="og:site_name" content="Noah Carmichael" />
 <meta property="og:title" content="Ubuntu Capital — The Founding Release" />
-<meta property="og:description" content="A two-part thesis on coordinated capital formation and the African diaspora investment network. Secure your Founding Edition before the November public release." />
+<meta property="og:description" content="A two-part thesis on coordinated capital formation and the African diaspora investment network. Reservations are open now; signing and shipping begins May 15, 2026." />
 <meta property="og:url" content="https://noahcarmichael.com/ubuntu-capital/" />
 <meta property="og:image" content="https://noahcarmichael.com/ubuntu-capital/ubuntu_bookstack_hero.png" />
 <meta property="og:image:alt" content="Ubuntu Capital — Executive Edition and Standard Edition stacked on dark marble" />
@@ -524,7 +524,7 @@
           "name": "How do digital copies get delivered?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On launch day, every digital-inclusive tier receives a download link at the email used at checkout. Files are DRM-free PDF and EPUB — readable on any device, no app required, yours to keep."
+            "text": "Digital-inclusive tiers receive a download link at the email used at checkout. Files are DRM-free PDF and EPUB — readable on any device, no app required, yours to keep. Early reservations get first access as digital editions are finalized in the weeks leading up to May 15, 2026."
           }
         },
         {
@@ -573,26 +573,23 @@
 
   HOW TO CUSTOMIZE
   • Search for "REPLACE:" — every editable content spot is tagged.
-  • Search for "STRIPE-LINK" — all 9 tier CTA buttons are tagged.
+  • Search for "STRIPE-LINK" — all 8 tier CTA buttons + 1 donation button.
 
-  STRIPE SETUP (one-time, ~15 minutes)
-  1. dashboard.stripe.com → Payment Links → New link
-  2. Create one link per tier. For any tier that ships a physical book,
-     toggle ON: "Collect shipping address"
-  3. Copy each link URL into the matching <a href="..."> below.
+  STATS COUNTER
+  The pledge/supporter numbers auto-increment weekly from the baseline.
+  See STATS_CONFIG near the bottom of the script to adjust the starting
+  numbers and growth rate, or replace with real Stripe data if desired.
 
-  FUNDING PROGRESS
-  Update the three numbers in the hero progress block as pledges come
-  in, and adjust the .bar-fill width: X% to reflect the %.
-
-  FILES TO UPLOAD TO GITHUB
+  FILES IN THE ubuntu-capital/ FOLDER
   • index.html (this file)
+  • favicon.png
+  • ubuntu_bookstack_hero.png
   • ubuntu_standard_cover.jpg
   • ubuntu_exec_cover.jpg
+  • prologue.pdf (upload your PDF here; the Download button links to it)
 
-  DEPLOY TO NOAHCARMICHAEL.COM
-  Easiest: upload all three files to a /ubuntu-capital/ subdirectory
-  of your existing site so the URL is noahcarmichael.com/ubuntu-capital/
+  DEPLOYED AT
+  noahcarmichael.com/ubuntu-capital/
   ═════════════════════════════════════════════════════════════════════
 -->
 
@@ -935,18 +932,15 @@
   .prologue-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 500; line-height: 1.15; margin-bottom: 1.5rem; color: var(--ivory); }
   .prologue-text h2 em { color: var(--gold); font-style: italic; }
   .prologue-text p { color: var(--ivory-dim); font-size: 18px; line-height: 1.65; margin-bottom: 1rem; }
-  .prologue-form-wrap { background: var(--navy-lift); border: 1px solid var(--gold-soft); padding: 2.5rem; }
-  .prologue-form-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: block; }
-  .prologue-form { display: flex; flex-direction: column; gap: 1rem; }
-  .prologue-form input { background: var(--navy-deep); border: 1px solid var(--rule); padding: 14px 18px; color: var(--ivory); font-family: 'Instrument Sans', sans-serif; font-size: 15px; transition: border 0.2s; }
-  .prologue-form input:focus { outline: none; border-color: var(--gold); }
-  .prologue-form input::placeholder { color: var(--muted); }
-  .prologue-form button { background: var(--gold); color: var(--navy-deep); border: 0; padding: 15px 24px; font-family: 'Instrument Sans', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.25s; }
-  .prologue-form button:hover { background: var(--gold-bright); }
-  .prologue-form-note { margin-top: 1rem; color: var(--muted); font-size: 12px; font-style: italic; line-height: 1.5; }
-  .prologue-form-success { display: none; padding: 1.5rem 0; text-align: center; color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; }
-  .prologue-form-success.visible { display: block; }
-  .prologue-form.hidden { display: none; }
+  .prologue-download-wrap { background: var(--navy-lift); border: 1px solid var(--gold-soft); padding: 2.5rem; text-align: center; }
+  .prologue-form-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.75rem; display: block; }
+  .prologue-dl-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; padding: 1.75rem 1.5rem; background: var(--gold); color: var(--navy-deep); border: 1px solid var(--gold); font-family: 'Instrument Sans', sans-serif; text-decoration: none; transition: all 0.25s cubic-bezier(.2, .8, .2, 1); cursor: pointer; position: relative; overflow: hidden; }
+  .prologue-dl-btn:hover { background: var(--gold-bright); border-color: var(--gold-bright); transform: translateY(-2px); box-shadow: 0 12px 30px -10px rgba(201, 169, 89, 0.4); }
+  .prologue-dl-btn .dl-icon { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; line-height: 1; margin-bottom: 0.25rem; transition: transform 0.3s; }
+  .prologue-dl-btn:hover .dl-icon { transform: translateY(3px); }
+  .prologue-dl-btn .dl-text { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+  .prologue-dl-btn .dl-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; opacity: 0.7; margin-top: 0.25rem; }
+  .prologue-form-note { margin-top: 1.5rem; color: var(--muted); font-size: 12px; font-style: italic; line-height: 1.5; }
 
   /* Responsive additions */
   @media (max-width: 1000px) {
@@ -956,7 +950,7 @@
   }
   @media (max-width: 640px) {
     .countdown-grid { max-width: 100%; }
-    .prologue-form-wrap { padding: 1.75rem; }
+    .prologue-download-wrap { padding: 1.75rem; }
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -1056,10 +1050,11 @@
     details { padding: 1.5rem 0; }
     details > p { font-size: 15.5px; line-height: 1.65; }
 
-    /* Form inputs — meet Apple's 44px minimum tap target */
-    .prologue-form input { padding: 15px 16px; font-size: 16px; /* 16px prevents iOS zoom */ }
-    .prologue-form button { padding: 17px 20px; font-size: 12px; }
-    .prologue-form-wrap { padding: 1.75rem 1.5rem; }
+    /* Prologue download button — meets Apple's 44px tap target */
+    .prologue-download-wrap { padding: 1.75rem 1.5rem; }
+    .prologue-dl-btn { padding: 1.5rem 1.25rem; }
+    .prologue-dl-btn .dl-icon { font-size: 28px; }
+    .prologue-dl-btn .dl-text { font-size: 13px; }
 
     /* Donate + closing section */
     .donate-inner { padding: 2.5rem 1.25rem; border-left: 0; border-right: 0; border-top: 1px solid var(--gold-soft); border-bottom: 1px solid var(--gold-soft); }
@@ -1174,9 +1169,9 @@
       </div>
       <h1 class="serif">Success Leaves Clues.<br>This Project <em>Maps</em> the<br>Architecture Behind Them.</h1>
       <div class="hero-badge-strip">
-        <span>Limited Founding Edition</span>
+        <span>Reservations Open Now</span>
         <span class="dot">·</span>
-        <span>Pre-publication release</span>
+        <span>Signing &amp; Shipping Begins May 15</span>
         <span class="dot">·</span>
         <span>Names printed in the November public edition</span>
       </div>
@@ -1225,15 +1220,15 @@
   <!-- LAUNCH COUNTDOWN -->
   <section class="countdown-section">
     <div class="countdown-inner">
-      <div class="countdown-label">Mark Your Calendar</div>
-      <h2 class="countdown-title">Founding Edition Reservations Open <em>May 15, 2026</em></h2>
+      <div class="countdown-label">Reservations Open Now</div>
+      <h2 class="countdown-title">Signing &amp; Shipping Begins <em>May 15, 2026</em></h2>
       <div class="countdown-grid">
         <div class="cd-cell"><div class="cd-val" id="cd-d">—</div><div class="cd-unit">Days</div></div>
         <div class="cd-cell"><div class="cd-val" id="cd-h">—</div><div class="cd-unit">Hours</div></div>
         <div class="cd-cell"><div class="cd-val" id="cd-m">—</div><div class="cd-unit">Minutes</div></div>
         <div class="cd-cell"><div class="cd-val" id="cd-s">—</div><div class="cd-unit">Seconds</div></div>
       </div>
-      <p class="countdown-note">Limited pre-publication window before the November public release.<br>Founding supporters receive early access based on reservation date.</p>
+      <p class="countdown-note">Reserve your Founding Edition today. Signing and shipping runs from May 15 through November 2026 — earlier reservations receive earlier delivery.</p>
     </div>
   </section>
 
@@ -1280,46 +1275,30 @@
     <div class="prologue-inner">
       <div class="prologue-text">
         <span class="eyebrow">Free · Available Now</span>
-        <h2 class="serif">Read the <em>prologue</em> before launch</h2>
+        <h2 class="serif">Read the <em>prologue</em> before you reserve</h2>
         <p>The opening chapter of the Standard Edition — a free, unabridged excerpt that lays out the thesis's foundations.</p>
-        <p>Everyone who reserves the prologue also gets early release notifications and founding-window access when reservations open May 1.</p>
+        <p>No email required. No forms. Just the prologue — read it on your own terms.</p>
       </div>
 
-      <div class="prologue-form-wrap">
+      <div class="prologue-download-wrap">
         <span class="prologue-form-label">◆ Instant PDF Download</span>
 
         <!--
-          PROLOGUE FORM SETUP
-          Replace action="YOUR_FORM_ENDPOINT" below with an email service endpoint:
-
-          OPTION A — Formspree (simplest, free for 50/mo):
-            Sign up at formspree.io → New form → copy the endpoint URL
-            Have them email you the subscriber info, then send the prologue manually
-            OR set up a Formspree autoresponder with the PDF attached
-
-          OPTION B — ConvertKit / Mailchimp / Beehiiv / Kit (recommended for lead magnets):
-            Create an automation that sends the prologue PDF when someone subscribes
-            Use the form endpoint they give you (or embed their form HTML instead)
-
-          OPTION C — direct download (no email capture):
-            Upload prologue.pdf alongside index.html
-            Replace the whole <form>...</form> with:
-            <a href="prologue.pdf" download class="tier-btn" style="text-align:center;background:var(--gold);color:var(--navy-deep);border-color:var(--gold);">Download the Prologue →</a>
+          PROLOGUE DOWNLOAD:
+          The button below links to prologue.pdf, which must live alongside index.html
+          in the ubuntu-capital folder on GitHub. Upload your prologue PDF to that
+          folder and name it exactly: prologue.pdf
+          The `download` attribute prompts the browser to save rather than open inline.
         -->
 
-        <form class="prologue-form" id="prologueForm" action="YOUR_FORM_ENDPOINT" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-          <input type="hidden" name="_subject" value="New prologue request — Ubuntu Capital" />
-          <button type="submit">Send Me the Prologue</button>
-        </form>
-
-        <div class="prologue-form-success" id="prologueSuccess">
-          Check your inbox — the prologue is on its way.
-        </div>
+        <a href="prologue.pdf" download class="prologue-dl-btn">
+          <span class="dl-icon">↓</span>
+          <span class="dl-text">Download the Prologue</span>
+          <span class="dl-meta">PDF · ~2 MB</span>
+        </a>
 
         <p class="prologue-form-note">
-          One email, no spam. You'll be first to know when founding reservations open May 15, 2026.
+          DRM-free PDF. Yours to keep, share with colleagues, or re-read before reserving.
         </p>
       </div>
     </div>
@@ -1552,9 +1531,10 @@
       <h2 class="serif">The first structured presentation of the <em>full thesis</em>.</h2>
       <span class="ornament">— ◆ —</span>
       <p>
-        Founding Edition reservations open <strong style="color:var(--gold);">May 15, 2026</strong>.
-        Founding supporters receive early access to both editions prior to the public release —
-        with earlier reservations receiving earlier delivery within the founding window.
+        <strong style="color:var(--gold);">Reservations are open now.</strong>
+        Signing and shipping for Founding Editions begins
+        <strong style="color:var(--gold);">May 15, 2026</strong> and runs through November —
+        earlier reservations receive earlier delivery.
       </p>
       <p style="margin-top: 1.25rem;">
         Individual editions become publicly available in <strong style="color:var(--gold);">approximately November 2026</strong>.
@@ -1572,7 +1552,7 @@
         <h2 class="serif">Select Your <em>Founding Edition</em></h2>
         <p class="intro">Every tier includes founding supporter recognition and early access to both editions. <strong style="color:var(--gold);">All physical editions include worldwide shipping. No additional fees.</strong></p>
         <p class="scarcity-line">Limited Founding Edition · Available only during the pre-publication window</p>
-        <p class="prepub-note">This is a pre-publication Founding Edition. Delivery begins during the founding window prior to the November 2026 public release.</p>
+        <p class="prepub-note">This is a pre-publication Founding Edition. Reservations are open now, with signing and shipping running May 15 through November 2026 — earlier reservations receive earlier delivery.</p>
       </div>
 
       <!-- GROUP 1: INDIVIDUAL EDITIONS -->
@@ -1805,7 +1785,7 @@
       <div class="section-head center">
         <span class="eyebrow">Common Questions</span>
         <h2 class="serif">Before you secure your edition</h2>
-        <p class="fairness-line">Reservations are fulfilled in the order received during the founding window.</p>
+        <p class="fairness-line">Reservations are fulfilled in the order received — earlier reservations ship earlier.</p>
       </div>
       <div class="faq-list">
         <details open>
@@ -1818,7 +1798,7 @@
         </details>
         <details>
           <summary>When will physical copies ship?</summary>
-          <p>Paperback editions are expected to ship within 6 weeks of the founding release closing. Signed and collector editions, which require signing and hand-numbering, ship within 8–10 weeks. Institutional orders coordinate shipping directly.</p>
+          <p>Signing and shipping begins <strong style="color:var(--gold);">May 15, 2026</strong> and runs through November on a rolling basis, with earlier reservations fulfilled first. Paperback editions typically ship within 2–4 weeks of your reservation. Signed and collector editions, which require signing and hand-numbering, take 4–8 weeks from reservation. Institutional orders coordinate shipping directly.</p>
         </details>
         <details>
           <summary>Is shipping included? Where do you ship?</summary>
@@ -1836,7 +1816,7 @@
         </details>
         <details>
           <summary>How do digital copies get delivered?</summary>
-          <p>On launch day, every digital-inclusive tier receives a download link at the email used at checkout. Files are DRM-free PDF and EPUB — readable on any device, no app required, yours to keep.</p>
+          <p>Digital-inclusive tiers receive a download link at the email used at checkout. Files are DRM-free PDF and EPUB — readable on any device, no app required, yours to keep. Early reservations get first access as digital editions are finalized in the weeks leading up to May 15.</p>
         </details>
         <details>
           <summary>Is the founding supporter recognition public?</summary>
@@ -1847,8 +1827,8 @@
           <p>Yes — individual editions open to the public in <strong style="color:var(--gold);">approximately November 2026</strong>. Until then, both editions are available exclusively through this founding window. Every public copy printed in November carries the names of founding supporters in its acknowledgments, so if you want your name in the permanent record of the release, the founding window is the only opportunity.</p>
         </details>
         <details>
-          <summary>Refund policy?</summary>
-          <p>Full refund on request for any reason until books are sent to the printer (roughly 4 weeks after the founding release closes). After that, refunds are reviewed case by case. Reply to your Stripe receipt to request.</p>
+          <summary>What is the refund policy?</summary>
+          <p>Full refund on request for any reason up until your specific order enters production (roughly 2 weeks before your scheduled ship date). After that, refunds are reviewed case by case. Reply to your Stripe receipt to request.</p>
         </details>
         <details>
           <summary>How can institutions arrange a bulk or custom order?</summary>
@@ -1900,7 +1880,7 @@
     </div>
   </div>
   <div class="footer-urgency">
-    Founding Edition reservations remain open until the November public release.
+    Founding Edition reservations are open now · Signing &amp; shipping May 15 through November 2026
   </div>
   <div class="footer-bottom">
     <span>© 2026 Glidepath Media · Carmichael &amp; Russ Capital · All Rights Reserved</span>
@@ -2000,45 +1980,6 @@
     }
     tick();
     setInterval(tick, 1000);
-  })();
-
-  // ═══════ Prologue Form — Graceful Success State ═══════
-  // Once Formspree (or similar) is wired up in the form action,
-  // this intercepts the submit, POSTs via fetch, and shows success inline.
-  (function() {
-    var form = document.getElementById('prologueForm');
-    var success = document.getElementById('prologueSuccess');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-      // If the form action hasn't been configured yet, skip the fetch and just show success
-      // (useful during testing before Formspree is wired up)
-      if (form.action.indexOf('YOUR_FORM_ENDPOINT') !== -1) {
-        e.preventDefault();
-        form.classList.add('hidden');
-        success.classList.add('visible');
-        success.textContent = '⚠ Configure the form action in the HTML to activate submissions.';
-        success.style.color = '#e89b7a';
-        return;
-      }
-
-      e.preventDefault();
-      var data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res) {
-        if (res.ok) {
-          form.classList.add('hidden');
-          success.classList.add('visible');
-        } else {
-          alert('Something went wrong. Please email us directly.');
-        }
-      }).catch(function() {
-        alert('Something went wrong. Please email us directly.');
-      });
-    });
   })();
 </script>
 
